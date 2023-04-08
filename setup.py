@@ -15,7 +15,7 @@ setup(
     url              = 'https://github.com/Munmud/Community-Detection-Modularity',
     license          = 'Apache2.0',
     install_requires = [ ],
-    packages         = ['age_dijkstra',],
+    packages         = [],
     keywords         = ['Community-Detection', 'Modularity', 'Reichardt and Bornholdt','Newman', 'partition network', 'k means cluster'],
     python_requires  = '>=3.9',
     classifiers      = [
