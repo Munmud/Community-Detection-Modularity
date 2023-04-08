@@ -5,7 +5,7 @@ with open("README.md", "r", encoding='utf8') as fh:
     long_description = fh.read()
 
 setup(
-    name             = 'apache-age-community-detection',
+    name             = 'age_community_detection',
     version          = VERSION.VERSION,
     description      = 'Detection of Community by maximizing modularity',
     long_description=long_description,

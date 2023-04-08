@@ -1,4 +1,4 @@
-name: Publish apache-age-dijkstra to PyPI
+name: Publish apache-age-community-detection to PyPI
 on:
   push:
     tags:
