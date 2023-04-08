@@ -1,0 +1,25 @@
+CC = gcc
+CFLAGS = -std=c11 -lm -O -fPIC
+HEADER_FILE = modularity.h memory.h community_detection.h eigen.h
+OBJS = modularity.o memory.o eigen.o community_detection.o
+
+all: library.so
+
+library.so: $(OBJS)
+	$(CC) $(CFLAGS) -shared $^ -o $@ -lgsl -lgslcblas
+	rm -f *.o
+
+community_detection.o: community_detection.c $(HEADER_FILE)
+	$(CC) $(CFLAGS) -c community_detection.c
+
+modularity.o: modularity.c $(HEADER_FILE)
+	$(CC) $(CFLAGS) -c modularity.c
+
+memory.o: memory.c $(HEADER_FILE)
+	$(CC) $(CFLAGS) -c memory.c
+
+eigen.o: eigen.c $(HEADER_FILE)
+	gcc $(CFLAGS) -c eigen.c -lgsl -lgslcblas
+
+clean:
+	rm -f *.o *.so
