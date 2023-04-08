@@ -3,7 +3,7 @@ import ctypes
 import os
 
 absolute_path = os.path.dirname(__file__)
-absolute_path += "/library.so"
+absolute_path += "lib/library.so"
 
 # # Load the shared library
 lib = ctypes.CDLL(absolute_path)

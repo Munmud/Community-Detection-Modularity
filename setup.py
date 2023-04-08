@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, Extension
 from age_community_detection import VERSION
 
 with open("README.md", "r", encoding='utf8') as fh:
@@ -15,7 +15,8 @@ setup(
     url              = 'https://github.com/Munmud/Community-Detection-Modularity',
     license          = 'Apache2.0',
     install_requires = ['numpy'],
-    packages         = ['age_community_detection', ['age_community_detection/library.so']],
+    packages         = ['age_community_detection'],
+    package_data={'age_community_detection': ['lib/*.so']},
     keywords         = ['Community-Detection', 'Modularity', 'Reichardt and Bornholdt','Newman', 'partition network', 'k means cluster'],
     python_requires  = '>=3.9',
     classifiers      = [
