@@ -1,4 +1,5 @@
 from . import Check
+from . import Lib
 
 class Graph:
     def __init__(self):
@@ -15,4 +16,8 @@ class Graph:
 
     def __str__(self):
         return f"Graph with nodes : {self.nodes} edges : ({self.edges})"
+    
+    def get_community(self):
+        Check.isGraphCreated(self.nodes, self.edges)
+        return Lib.get_community(self.nodes,self.edges)
 

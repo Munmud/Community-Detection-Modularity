@@ -20,6 +20,13 @@ def EdgeExistInNodes(nodes, edges):
     """Check if Edge exist in node list"""
     for u,v in edges:
         if u not in nodes:
-            raise Exception.NodeNotExist(u)
+            raise Exception.NodeNotExistException(u)
         if v not in nodes:
-            raise Exception.NodeNotExist(v)
+            raise Exception.NodeNotExistException(v)
+
+def isGraphCreated(nodes,edges):
+    """Check if Graph created of not"""
+    if(nodes == None):
+        raise Exception.GraphNotCreatedException()
+    if(edges== None):
+        raise Exception.GraphNotCreatedException()

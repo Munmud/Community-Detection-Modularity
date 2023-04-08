@@ -10,6 +10,10 @@ class NotAnEdgeException(Exception):
     def __repr__(self, data) :
         return f"{data} is not a valid edge"
 
-class NodeNotExist(Exception):
+class NodeNotExistException(Exception):
     def __repr__(self, data) :
         return f"Node {data} is not Exist in node List"
+
+class GraphNotCreatedException(Exception):
+    def __repr__(self, data) :
+        return f"Graph is not created."
