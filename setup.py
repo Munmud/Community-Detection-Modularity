@@ -15,7 +15,7 @@ setup(
     url              = 'https://github.com/Munmud/Community-Detection-Modularity',
     license          = 'Apache2.0',
     install_requires = ['numpy'],
-    packages         = ['age_community_detection'],
+    packages         = ['age_community_detection', ['age_community_detection/library.so']],
     keywords         = ['Community-Detection', 'Modularity', 'Reichardt and Bornholdt','Newman', 'partition network', 'k means cluster'],
     python_requires  = '>=3.9',
     classifiers      = [
