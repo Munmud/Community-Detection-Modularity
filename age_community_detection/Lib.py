@@ -2,8 +2,8 @@ import numpy as np
 import ctypes
 import os
 
-# absolute_path = os.path.dirname(__file__)
-absolute_path = "lib/library.so"
+absolute_path = os.path.dirname(__file__)
+absolute_path += "/lib/library.so"
 
 # # Load the shared library
 lib = ctypes.CDLL(absolute_path)
