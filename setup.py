@@ -5,7 +5,7 @@ with open("README.md", "r", encoding='utf8') as fh:
     long_description = fh.read()
 
 setup(
-    name             = 'munmud-age-community-detection',
+    name             = 'apache-age-community-detection',
     version          = VERSION.VERSION,
     description      = 'Detection of Community by maximizing modularity',
     long_description=long_description,
@@ -14,9 +14,9 @@ setup(
     author_email     = 'moontasir042@gmail.com',
     url              = 'https://github.com/Munmud/Community-Detection-Modularity',
     license          = 'Apache2.0',
-    install_requires = [ 'numpy'],
+    install_requires = [ ],
     packages         = ['age_dijkstra',],
-    keywords         = ['Community-Detection', 'Modularity', 'Reichardt and Bornholdt','Newman-Girvan', 'partition network', 'k means cluster'],
+    keywords         = ['Community-Detection', 'Modularity', 'Reichardt and Bornholdt','Newman', 'partition network', 'k means cluster'],
     python_requires  = '>=3.9',
     classifiers      = [
         'Programming Language :: Python :: 3.9'
