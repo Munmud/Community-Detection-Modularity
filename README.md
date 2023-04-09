@@ -43,6 +43,7 @@ from age_community_detection import Graph
 nodes = [0, 1, 2, 3, 4, 5]
 edges = [[0, 1], [0, 2], [1, 2], [2, 3], [3, 4], [3, 5], [4, 5]]
 g = Graph.Graph()
+g.createGraph(nodes, edges)
 ```
 - Nodes : `0 to N-1`
 - Edges : 
@@ -59,6 +60,9 @@ res = g.get_community()
 [1, 1, 1, 0, 0, 0, 2, 2, 0, 3, 3, 1, 3]
 ```
 - Here each number represents the community number of corresponding node
+
+### Samples
+- [Creating Graph](https://github.com/Munmud/Community-Detection-Modularity/blob/main/Samples/sample1.py)
 
 ### Reference
 - [Finding community structure in networks using the eigenvectors of matrices](https://arxiv.org/pdf/physics/0605087.pdf)
