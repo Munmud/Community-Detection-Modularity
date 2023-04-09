@@ -3,10 +3,15 @@ import ctypes
 import os
 
 absolute_path = os.path.dirname(__file__)
-absolute_path += "/lib/library.so"
+absolute_path_ubuntu = absolute_path+ "/lib/library.so"
+absolute_path_windows = absolute_path+ "/lib/library.dll"
 
+try:
 # # Load the shared library
-lib = ctypes.CDLL(absolute_path)
+    lib = ctypes.CDLL(absolute_path_windows)
+except:
+    lib = ctypes.CDLL(absolute_path_ubuntu)
+
 
 def get_community(nodes, edges):
     # Create a 2D NumPy array

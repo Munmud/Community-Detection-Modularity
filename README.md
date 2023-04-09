@@ -26,6 +26,11 @@ cd Community-Detection-Modularity
 python setup.py install
 ```
 
+### Unit Test
+```cmd
+python -m unittest test_community.py
+```
+
 ## Instruction
 
 ### import
