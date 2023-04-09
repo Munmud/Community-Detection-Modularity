@@ -13,6 +13,7 @@
 */
 double *create_1d_array(int size)
 {
+
     double *arr = (double *)malloc(size * sizeof(double));
     if (arr == NULL)
     {
@@ -111,6 +112,11 @@ void free_2d_array(double **arr, int rows)
     {
         free(arr[i]);
     }
+    free(arr);
+}
+
+void free_1d_array(int *arr)
+{
     free(arr);
 }
 

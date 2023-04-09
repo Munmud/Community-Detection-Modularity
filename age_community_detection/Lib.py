@@ -1,4 +1,3 @@
-import numpy as np
 import ctypes
 import os
 
@@ -12,28 +11,28 @@ try:
 except:
     lib = ctypes.CDLL(absolute_path_ubuntu)
 
+get_community_assignment = lib.get_community_assignment
+get_community_assignment.restype = ctypes.POINTER(ctypes.c_int)
 
 def get_community(nodes, edges):
-    # Create a 2D NumPy array
-    a = np.array(edges, dtype=np.int32)
+
+    arr = (ctypes.c_int * (len(edges)*2))()
+    for i,[u,v] in enumerate(edges):
+        arr[(i*2)] = u
+        arr[i*2+1] = v
+    
+    nrows = len(edges)
     nodeCount = len(nodes)
 
-    # Get the dimensions of the array
-    nrows, ncols = a.shape
-
-    # Create a 1D NumPy array to hold the output
-    b = np.zeros(nodeCount, dtype=np.int32)
-
-    # Pass the arrays to the C function
-    lib.get_community(
-        a.ctypes.data_as(ctypes.POINTER(ctypes.c_int)), # edge
-        ctypes.c_int(nrows), #edge_count
-        ctypes.c_int(nodeCount), #node_count
-        b.ctypes.data_as(ctypes.POINTER(ctypes.c_int))
-    )
-    b = [p for p in b]
-    return b
-
+    res = get_community_assignment(
+        arr,
+        ctypes.c_int(nrows),
+        ctypes.c_int(nodeCount))
+    
+    
+    res = [res[i] for i in range(len(nodes))]
+    
+    return res
 
 
 

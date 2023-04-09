@@ -14,7 +14,7 @@ setup(
     author_email     = 'moontasir042@gmail.com',
     url              = 'https://github.com/Munmud/Community-Detection-Modularity',
     license          = 'Apache2.0',
-    install_requires = ['numpy'],
+    install_requires = [],
     packages         = ['age_community_detection'],
     package_data={'age_community_detection': ['lib/*.so', 'lib/*.dll']},
     keywords         = ['Community-Detection', 'Modularity', 'Reichardt and Bornholdt','Newman', 'partition network', 'k means cluster'],

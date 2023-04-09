@@ -206,9 +206,11 @@ void divide_community(double **adj_mat, int n, int *nodes, double **mod_mat, int
 
     @return void
 */
-void get_community(int *edge, int edge_count, int n, int *output)
+int *get_community_assignment(int *edge, int edge_count, int n)
 {
     int i, j;
+
+    int *output = create_1d_array_int(n);
 
     /*
     Step 1: Construct the Adjacency Matrix
@@ -237,7 +239,8 @@ void get_community(int *edge, int edge_count, int n, int *output)
     divide_community(adj_mat, n, nodes, mod_mat, &community_num, output, modularityScore(mod_mat, n, nodes));
 
     free_2d_array(mod_mat, n);
-    free(edge);
+
+    return output;
 }
 
 #endif
