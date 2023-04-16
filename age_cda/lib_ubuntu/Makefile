@@ -4,13 +4,10 @@ HEADER_FILE = modularity.h memory.h community_detection.h eigen.h
 OBJS = modularity.o memory.o eigen.o community_detection.o
 LIBS = -lgsl -lgslcblas
 
-all: library.so library.dll
+all: library.so
 
 
 library.so: $(OBJS)
-	$(CC) $(CFLAGS) -shared $^ -o $@ $(LIBS) 
-
-library.dll: $(OBJS)
 	$(CC) $(CFLAGS) -shared $^ -o $@ $(LIBS) 
 	rm -f *.o
 

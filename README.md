@@ -64,6 +64,7 @@ res = g.get_community()
 
 ### Samples
 - [Creating Graph](https://github.com/Munmud/Community-Detection-Modularity/blob/main/Samples/sample1.py)
+- [Zachary's karate club](https://github.com/Munmud/Community-Detection-Modularity/blob/main/Samples/sample2.py)
 
 ### Reference
 - [Finding community structure in networks using the eigenvectors of matrices](https://arxiv.org/pdf/physics/0605087.pdf)
