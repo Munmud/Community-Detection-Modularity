@@ -35,7 +35,7 @@ python -m unittest test_community.py
 
 ### import
 ```py
-from age_community_detection import Graph
+from age_cda import Graph
 ```
 
 ### Create Graph

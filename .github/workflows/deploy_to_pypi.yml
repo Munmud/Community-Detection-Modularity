@@ -1,4 +1,4 @@
-name: Publish apache-age-community-detection to PyPI
+name: Publish age_cda to PyPI
 on:
   push:
     tags:
