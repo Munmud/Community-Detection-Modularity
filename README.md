@@ -25,6 +25,7 @@ git clone https://github.com/Munmud/Community-Detection-Modularity
 cd Community-Detection-Modularity
 python setup.py install
 ```
+- [Configure GSL - GNU Scientific Library](https://solarianprogrammer.com/2020/01/26/getting-started-gsl-gnu-scientific-library-windows-macos-linux/)
 
 ### Unit Test
 ```cmd
