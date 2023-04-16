@@ -1,11 +1,11 @@
 from setuptools import setup, Extension
-from age_community_detection import VERSION
+from age_cda import VERSION
 
 with open("README.md", "r", encoding='utf8') as fh:
     long_description = fh.read()
 
 setup(
-    name             = 'apache-age-community-detection',
+    name             = 'age_cda',
     version          = VERSION.VERSION,
     description      = 'Detection of Community by maximizing modularity',
     long_description=long_description,
@@ -15,8 +15,8 @@ setup(
     url              = 'https://github.com/Munmud/Community-Detection-Modularity',
     license          = 'Apache2.0',
     install_requires = [],
-    packages         = ['age_community_detection'],
-    package_data={'age_community_detection': ['lib/*.so', 'lib/*.dll']},
+    packages         = ['age_cda'],
+    package_data={'age_cda': ['lib_ubuntu/*.so', 'lib_windows/*.dll']},
     keywords         = ['Community-Detection', 'Modularity', 'Reichardt and Bornholdt','Newman', 'partition network', 'k means cluster'],
     python_requires  = '>=3.9',
     classifiers      = [

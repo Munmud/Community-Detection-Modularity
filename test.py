@@ -1,5 +1,5 @@
 import time
-from age_community_detection import Graph
+from age_cda import Graph
 import networkx as nx
 
 nodes = [0, 1, 2, 3, 4, 5]
@@ -13,7 +13,7 @@ start_time = time.time()
 
 g = Graph.Graph()
 g.createGraph(nodes, edges)
-res = g.get_community()
+final= g.get_community()
 
 end_time = time.time()
 
@@ -22,12 +22,6 @@ print("Elapsed time: {} seconds".format(end_time - start_time))
 from collections import defaultdict
 mp = defaultdict(list)
 
-final= []
-community_size = max(res)+1
-for j,val in enumerate(res):
-    mp[val].append(j)
-for i in range(community_size):
-    final.append(mp[i])
 
 
 from age_dijkstra import Age_Dijkstra

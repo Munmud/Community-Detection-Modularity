@@ -45,10 +45,10 @@ edges = [[0, 1], [0, 2], [1, 2], [2, 3], [3, 4], [3, 5], [4, 5]]
 g = Graph.Graph()
 g.createGraph(nodes, edges)
 ```
-- Nodes : `0 to N-1`
+- Nodes : `any`
 - Edges : 
     - `2d array : adjacency list`
-    - `Each element between 0 to N-1`
+    - `Each element within Nodes array
 
 ### Generate Community Assignment
 ```py
@@ -57,9 +57,10 @@ res = g.get_community()
 
 ### Output Format
 ```
-[1, 1, 1, 0, 0, 0, 2, 2, 0, 3, 3, 1, 3]
+[[3,4,5],[0,1,2]]
 ```
-- Here each number represents the community number of corresponding node
+- List community
+- Each community has list of nodes
 
 ### Samples
 - [Creating Graph](https://github.com/Munmud/Community-Detection-Modularity/blob/main/Samples/sample1.py)

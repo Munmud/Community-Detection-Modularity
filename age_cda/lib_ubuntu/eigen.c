@@ -62,7 +62,7 @@ int *getEigenVector(double **A, int n)
     int *output = create_1d_array_int(n);
     for (i = 0; i < n; i++)
     {
-        output[i] = (gsl_vector_get(&evec_i.vector, i) >= 0);
+        output[i] = (gsl_vector_get(&evec_i.vector, i) < 0);
         // printf("%f ", output[i]);
     }
 
