@@ -14,7 +14,7 @@ The basic idea is that nodes that belong to the same community will have similar
 
 ### Install via PIP
 ```cmd
-pip install apache-age-community-detection
+pip install age-cda
 ```
 
 ### Build from Source
