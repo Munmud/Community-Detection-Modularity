@@ -1,0 +1,4 @@
+C:\Users\moont\OneDrive\Desktop\test\Community-Detection-Modularity\age_cda\lib_windows\Release\lib_windows.vcxproj.CopyComplete
+C:\Users\moont\OneDrive\Desktop\test\Community-Detection-Modularity\age_cda\lib_windows\Release\lib_windows.dll
+C:\Users\moont\OneDrive\Desktop\test\Community-Detection-Modularity\age_cda\lib_windows\Release\gsl.dll
+C:\Users\moont\OneDrive\Desktop\test\Community-Detection-Modularity\age_cda\lib_windows\Release\gslcblas.dll

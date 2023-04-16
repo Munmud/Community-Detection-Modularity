@@ -16,7 +16,7 @@ setup(
     license          = 'Apache2.0',
     install_requires = [],
     packages         = ['age_cda'],
-    package_data={'age_cda': ['lib_ubuntu/*.so', 'lib_windows/*.dll']},
+    package_data={'age_cda': ['lib_ubuntu/*.so', 'lib_windows/x64/Release/*.dll', 'lib_windows/x86/Release/*.dll']},
     keywords         = ['Community-Detection', 'Modularity', 'Reichardt and Bornholdt','Newman', 'partition network', 'k means cluster'],
     python_requires  = '>=3.9',
     classifiers      = [

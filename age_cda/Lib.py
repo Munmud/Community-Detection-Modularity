@@ -5,8 +5,8 @@ from collections import defaultdict
 
 absolute_path = os.path.dirname(__file__)
 absolute_path_ubuntu = os.path.join(absolute_path, "lib_ubuntu", "library.so")
-absolute_path_windows32 = os.path.join(absolute_path, "lib_windows", "library32.dll")
-absolute_path_windows64 = os.path.join(absolute_path, "lib_windows", "library64.dll")
+absolute_path_windows32 = os.path.join(absolute_path, "lib_windows", 'x86', 'Release',  "lib_windows.dll")
+absolute_path_windows64 = os.path.join(absolute_path, "lib_windows", 'x64', 'Release',  "lib_windows.dll")
 
 # # Load the shared library
 try:
